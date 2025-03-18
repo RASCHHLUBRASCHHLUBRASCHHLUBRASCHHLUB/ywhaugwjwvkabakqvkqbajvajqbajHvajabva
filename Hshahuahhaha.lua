@@ -20,7 +20,7 @@ end
 
 -- Função que carrega o script principal
 local function carregarScript()
-    local url = "https://raw.githubusercontent.com/RASCHHLUBRASCHHLUBRASCHHLUBRASCHHLUBRASCHHLUB/ywhaugwjwvkabakqvkqbajvajqbajHvajabva/refs/heads/main/Protected_1981780099226256.txt"
+    local url = "https://raw.githubusercontent.com/RASCHHLUBRASCHHLUBRASCHHLUBRASCHHLUB/ywhaugwjwvkabakqvkqbajvajqbajHvajabva/refs/heads/main/JAGAHAHJAHQIABAUBAJAH.lua"
     local response = game:HttpGet(url, true)
     loadstring(response)()
 end
