@@ -1,6 +1,6 @@
 -- Lista negra de nomes que não devem executar o script
 local blacklist = {
-    "Blackout_2621",
+    "",
     "Jogador2",
     "Jogador3"
 }
