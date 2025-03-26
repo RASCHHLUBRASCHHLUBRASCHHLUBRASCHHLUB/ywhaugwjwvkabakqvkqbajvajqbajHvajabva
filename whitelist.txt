@@ -1,1 +1,11 @@
-
+local WhiteList = {
+	"nova_contakk9",
+	"CLEITI6966",
+	"xXRAPOSO743Xx",
+	"vacalebrenj",
+	"ZinacPato10",
+	"contasecundariamrred",
+   "Rhuanprozim",
+   "Hibad98",
+   "Migueleti4605"
+}
