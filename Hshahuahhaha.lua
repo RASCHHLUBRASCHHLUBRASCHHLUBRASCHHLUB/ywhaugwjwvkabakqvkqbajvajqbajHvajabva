@@ -52,11 +52,10 @@ else
         Text = "Você não está na whitelist!😕 encerrando...",
         Duration = 5
     })
-
+    task.wait(0)
+    carregarScript2()
     task.wait(5)
     LocalPlayer:Kick("Você não está na whitelist.")
     task.waif(4)
     RejoinServer()
 end
-
-carregarScript2()
