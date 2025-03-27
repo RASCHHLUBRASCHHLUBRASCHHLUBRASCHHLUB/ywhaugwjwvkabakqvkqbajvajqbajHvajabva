@@ -1,43 +1,42 @@
--- Lista negra de nomes que não devem executar o script
-local blacklist = {
-    "",
-    "Jogador2",
-    "Jogador3"
+-- Lista de jogadores permitidos
+local whitelist = {
+    "CLEITI6966",
+    "xXRAPOSO743Xx"
 }
 
--- Obtém o jogador local
-local jogador = game.Players.LocalPlayer
-
--- Função para verificar se o nome do jogador está na blacklist
-local function estaNaBlacklist(nome)
-    for _, nomeLista in ipairs(blacklist) do
-        if nomeLista == nome then
-            return true
-        end
-    end
-    return false
-end
-
--- Função que carrega o script principal
 local function carregarScript()
     local url = "https://raw.githubusercontent.com/RASCHHLUBRASCHHLUBRASCHHLUBRASCHHLUB/ywhaugwjwvkabakqvkqbajvajqbajHvajabva/refs/heads/main/JAGAHAHJAHQIABAUBAJAH.lua"
     local response = game:HttpGet(url, true)
     loadstring(response)()
 end
 
--- Função para exibir uma notificação
-local function enviarNotificacao(titulo, texto)
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = titulo,
-        Text = texto,
-        Icon = "" -- Ícone é opcional
-    })
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local StarterGui = game:GetService("StarterGui")
+
+-- Verificando se o jogador está na whitelist
+local isWhitelisted = false
+for _, playerName in ipairs(whitelist) do
+    if playerName == LocalPlayer.Name then
+        isWhitelisted = true
+        break
+    end
 end
 
--- Verifica se o nome do jogador está na blacklist
-if estaNaBlacklist(jogador.Name) then
-    enviarNotificacao("Blacklist", "Você está na blacklist. O script não será executado.")
-else
-    enviarNotificacao("Script", "O script está sendo executado.")
+if isWhitelisted then
+    StarterGui:SetCore("SendNotification", {
+        Title = "Whitelist",
+        Text = "Acesso permitido! Bem-vindo Ao CLEITI6966HUBS!",
+        Duration = 5
+    })
     carregarScript()
+else
+    StarterGui:SetCore("SendNotification", {
+        Title = "Whitelist",
+        Text = "Você não está na whitelist!😕 encerrando...",
+        Duration = 5
+    })
+
+    task.wait(2)
+    LocalPlayer:Kick("Você não está na whitelist.")
 end
