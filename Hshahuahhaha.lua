@@ -10,6 +10,16 @@ local function carregarScript()
     loadstring(response)()
 end
 
+local function RejoinServer()
+    local TeleportService = game:GetService("TeleportService")
+    local Players = game:GetService("Players")
+    local player = Players.LocalPlayer
+
+    if player then
+        TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, player)
+    end
+end
+
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local StarterGui = game:GetService("StarterGui")
@@ -39,4 +49,6 @@ else
 
     task.wait(2)
     LocalPlayer:Kick("Você não está na whitelist.")
+    task.waif(4)
+    RejoinServer()
 end
