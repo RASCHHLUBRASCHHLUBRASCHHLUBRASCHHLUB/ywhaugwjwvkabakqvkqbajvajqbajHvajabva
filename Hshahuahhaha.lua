@@ -5,6 +5,7 @@ local whitelist = {
     "irmaodomeio1",
     "mileno_fofinho",
     "cuidado_025",
+    "amandabrfofinhagam2"
 }
 
 local function carregarScript()
