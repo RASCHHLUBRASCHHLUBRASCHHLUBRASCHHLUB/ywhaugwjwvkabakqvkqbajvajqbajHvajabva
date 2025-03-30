@@ -4,6 +4,7 @@ local whitelist = {
     "xXRAPOSO743Xx",
     "irmaodomeio1",
     "mileno_fofinho",
+    "cuidado_025",
 }
 
 local function carregarScript()
