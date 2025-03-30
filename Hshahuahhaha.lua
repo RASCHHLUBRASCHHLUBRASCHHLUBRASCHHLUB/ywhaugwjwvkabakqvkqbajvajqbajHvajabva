@@ -1,7 +1,9 @@
 -- Lista de jogadores permitidos
 local whitelist = {
     "CLEITI6966",
-    "xXRAPOSO743Xx"
+    "xXRAPOSO743Xx",
+    "irmaodomeio1",
+    "mileno_fofinho",
 }
 
 local function carregarScript()
